@@ -8,12 +8,18 @@ sticky: true
 excerpt: <p>A sticky article demo.</p>
 ---
 
-# Sticky Article
+# HTTP
 
-## Heading 2
-
-Here is the content.
-
-### Heading 3
+## 请求方法
 
 Here is the content.
+
+### GET
+
+### PUT
+
+### DELETE
+
+### PATCH
+
+### POST

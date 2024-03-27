@@ -6,8 +6,8 @@ import { viteBundler } from '@vuepress/bundler-vite'
 export default defineUserConfig({
   lang: 'en-US',
 
-  title: 'VuePress',
-  description: 'My first VuePress Site',
+  title: 'Rubyc',
+  description: '你最爱的大杂烩网站',
 
   theme: defaultTheme({
     logo: 'https://vuejs.press/images/hero.png',
@@ -29,6 +29,10 @@ export default defineUserConfig({
       {
         text: 'Timeline',
         link: '/timeline/',
+      },
+      {
+        text: '我要带货',
+        link: '/good/',
       },
     ],
   }),
@@ -94,7 +98,7 @@ export default defineUserConfig({
         {
           key: 'article',
           // Remove archive articles
-          filter: (page) => !page.frontmatter.archive,
+          filter: (page) => !page.frontmatter.archive && !page.frontmatter.goods,
           layout: 'Article',
           frontmatter: () => ({
             title: 'Articles',
@@ -131,6 +135,33 @@ export default defineUserConfig({
             title: 'Timeline',
             sidebar: false,
           }),
+        },
+        {
+          key: 'good',
+          // Remove archive articles
+          filter: (page) => page.frontmatter.goods,
+          layout: 'Good',
+          frontmatter: () => ({
+            title: 'Goods',
+            sidebar: false,
+          }),
+          // Sort pages with time and sticky
+          sorter: (pageA, pageB) => {
+            if (pageA.frontmatter.sticky && pageB.frontmatter.sticky)
+              return pageB.frontmatter.sticky - pageA.frontmatter.sticky
+
+            if (pageA.frontmatter.sticky && !pageB.frontmatter.sticky) return -1
+
+            if (!pageA.frontmatter.sticky && pageB.frontmatter.sticky) return 1
+
+            if (!pageB.frontmatter.date) return 1
+            if (!pageA.frontmatter.date) return -1
+
+            return (
+              new Date(pageB.frontmatter.date).getTime() -
+              new Date(pageA.frontmatter.date).getTime()
+            )
+          },
         },
       ],
       hotReload: true,

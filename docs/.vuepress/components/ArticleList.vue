@@ -140,4 +140,10 @@ defineProps({
     }
   }
 }
+
+pre {
+  code{
+    background-color: transparent !important;
+  }
+}
 </style>

@@ -1,5 +1,6 @@
 import { defineClientConfig } from 'vuepress/client'
 import Article from './layouts/Article.vue'
+import Good from './layouts/Good.vue'
 import Category from './layouts/Category.vue'
 import Tag from './layouts/Tag.vue'
 import Timeline from './layouts/Timeline.vue'
@@ -11,5 +12,6 @@ export default defineClientConfig({
     Category,
     Tag,
     Timeline,
+    Good
   },
 })
