@@ -292,3 +292,14 @@ npm run docs:build
 
 下一步，前往 [配置](./configuration.md) 了解更多配置文件相关的内容。
 
+
+## json序列化与字符串化
+```js
+// 解析
+JSON.parse(xxx)
+// 字符串序列化
+JSON.stringify(xxxx)
+```
+## 数组浅克隆
+
+## 数组深克隆

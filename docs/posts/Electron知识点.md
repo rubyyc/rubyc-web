@@ -1,19 +1,48 @@
 ---
-date: 2022-01-10
+date: 2024-04-02
 category:
-  - CategoryA
-  - CategoryB
+  - Electron
+  - React
 tag:
-  - tag C
-  - tag D
+  - Markdown
+  - 七牛云
 ---
 
-# Electron
+# Electron+React+Nodejs+七牛云打造Markdown云同步编辑器
 
-## Heading 2
+## 查看运行环境并创建工程
 
-Here is the content.
+```bash
+node -v
+npm -v
+mkdir my-electron-app && cd my-electron-app
+npm init
+```
 
-### Heading 3
+### package.json
 
-Here is the content.
+```json title="package.json"
+{
+  "name": "react-markdown",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+```
+
+### 安装electron
+```bash
+npm install --save-dev electron
+```
+
+### 运行
+```bash
+npm run start
+```

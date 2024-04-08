@@ -11,6 +11,10 @@ tag:
 # vscode
 ::: warning
 以下快捷键在Mac下使用,并且在系统设置里把Command键映射为Ctrl键
+Command键映射为Ctrl键
+Ctrl键映射为Command键
+本人键盘使用的XS75T
+win键是Command键
 :::
 ## 快捷键
 
@@ -25,8 +29,9 @@ tag:
 | Ctrl + Shift + W | 关闭当前窗口 | 系统 |
 | Ctrl + N | 新建文件夹 | 系统 |
 | Ctrl + / | 快速注释 | 系统 |
+| Ctrl + | | 当前文件分栏 | 系统 |
 | Ctrl + ' | 删除word | 自定义 |
-|  + w | 快速注释 | 系统 |
+| Alt + 鼠标左键单机 | 多个光标同时操作 | 系统 |
 | Ctrl + Backspace | 从当前光标删除到行首 | 系统 |
 | Ctrl + delete | 从当前光标删除到行尾 | 系统 |
 | Ctrl + Enter | 快速新建行 | 系统 |
