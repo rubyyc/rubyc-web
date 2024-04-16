@@ -284,15 +284,6 @@ npm run docs:build
   </CodeGroupItem>
 </CodeGroup>
 
-在 `docs/.vuepress/dist` 目录中可以找到构建生成的静态文件。你可以查看 [部署](./deployment.md) 来了解如何部署你的网站。
-
-## 进一步了解 VuePress
-
-现在，你应该已经有了一个简单可用的 VuePress 网站。但你可能仍需要阅读后续的指南来更加了解 VuePress 。
-
-下一步，前往 [配置](./configuration.md) 了解更多配置文件相关的内容。
-
-
 ## json序列化与字符串化
 ```js
 // 解析
@@ -303,3 +294,52 @@ JSON.stringify(xxxx)
 ## 数组浅克隆
 
 ## 数组深克隆
+
+## 封装一个函数,可以返回所有子元素节点（兼容IE6）,类似children的功能
+主要判断nodeType === 1
+
+## 封装一个函数,可以返回前一个元素的兄弟节点
+主要判断nodeType === 1
+
+## 封装一个函数,可以返回元素的所有兄弟节点
+
+## 对象的深克隆
+
+## 对象的浅克隆
+
+## 范围内的随机数
+```js
+parseInt(Math.random()*8)-4
+```
+
+## 得到[a,b]区间的整数
+```js
+parseInt(Math.random()*(b-a+1))+a
+```
+
+## 删除数组中的第i项
+
+```js
+arr.splice(i,1)
+```
+
+## 求数组的最大值
+
+```js
+var arr = [3,4,5,6,9]
+var max = Math.max.apply(null,arr)
+// es6
+var max = Math.max(...application_record)
+console.log(max);
+```
+
+## exec()方法的逐条遍历
+
+```js
+var str8 = 'abc123def456ghi789'
+var regex8 = /\d+/g
+
+while(result = regex8.exec(str8)){
+  console.log(result);
+}
+```
