@@ -8,7 +8,11 @@ sticky: 10
 archive: false
 ---
 
-# Mac软件包
+# Mac开发软件包或工具
+
+## [nrm](https://juejin.cn/post/6931597891182002183)
+
+管理镜像的
 
 ## tree
 查看目录结构
@@ -16,3 +20,5 @@ archive: false
 brew install tree
 tree
 ```
+
+
